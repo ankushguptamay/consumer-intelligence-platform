@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * Audit log of login attempts and logouts.
- */
 module.exports = (sequelize, DataTypes) => {
   const LoginRecord = sequelize.define(
     'LoginRecord',

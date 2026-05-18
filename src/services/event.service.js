@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * Records a behavioural / transaction event.
- * Maintains denormalized rollups atomically:
- *   - user_brand_associations.total_spend / purchase_count / last_event_at
- *   - users.total_lifetime_value / last_active_at
- */
 
 const { Op } = require('sequelize');
 const { sequelize, Event, User, Brand, UserBrandAssociation } = require('../models');

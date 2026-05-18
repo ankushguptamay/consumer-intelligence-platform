@@ -1,15 +1,5 @@
 'use strict';
 
-/**
- * Unified consumer profile management.
- *
- * upsertUser:
- *   - Looks up an existing user by email OR phone.
- *   - If both keys resolve to different users -> 409 conflict.
- *   - Otherwise creates or updates the matching row.
- *   - Optionally creates a user_brand_association record.
- */
-
 const { Op } = require('sequelize');
 const {
   sequelize,

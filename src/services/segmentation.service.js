@@ -1,17 +1,5 @@
 'use strict';
 
-/**
- * Simple rule-based segmentation engine.
- *
- * Each segment row stores a JSON rule like:
- *   { "type": "HIGH_VALUE_USER", "params": { "min_spend": 50000 } }
- *
- * To add a new segment type:
- *   1. Add a handler in RULE_HANDLERS keyed by the rule.type string.
- *   2. Insert a `segments` row with the matching type.
- * No schema change needed.
- */
-
 const { User, UserBrandAssociation, Segment, UserSegment } = require('../models');
 
 // Each handler returns true if the user matches the rule.

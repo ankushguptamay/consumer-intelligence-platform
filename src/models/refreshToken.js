@@ -1,10 +1,5 @@
 'use strict';
 
-/**
- * Refresh token storage.
- * The plain token value is SHA-256-hashed before persisting.
- * revoked_at lets the server invalidate a session immediately.
- */
 module.exports = (sequelize, DataTypes) => {
   const RefreshToken = sequelize.define(
     'RefreshToken',

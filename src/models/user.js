@@ -1,10 +1,5 @@
 'use strict';
 
-/**
- * Unified consumer profile.
- * One row per consumer regardless of how many brands they interact with.
- * email and phone are UNIQUE so duplicates are caught at the DB level.
- */
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     'User',

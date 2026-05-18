@@ -1,16 +1,5 @@
 'use strict';
 
-/**
- * Simple rule-based propensity score (0-100).
- *
- * Three signals, weights total 100:
- *   - Frequency:  5 points per PURCHASE in the last 180 days, capped at 50 (10+ purchases saturates)
- *   - Activity:   1 point per event (any type) in the last 180 days, capped at 20 (20+ events saturates)
- *   - Recency:    +30 points if any PURCHASE happened in the last 30 days
- *
- * Rationale is auto-generated from the inputs so the score is always explainable.
- */
-
 const { Op } = require('sequelize');
 const { User, Event, PropensityScore } = require('../models');
 

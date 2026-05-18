@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * Junction: users <-> segments. A user can belong to many segments.
- */
 module.exports = (sequelize, DataTypes) => {
   const UserSegment = sequelize.define(
     'UserSegment',

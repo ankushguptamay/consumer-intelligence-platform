@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * Latest computed spending-propensity score per user.
- */
 module.exports = (sequelize, DataTypes) => {
   const PropensityScore = sequelize.define(
     'PropensityScore',

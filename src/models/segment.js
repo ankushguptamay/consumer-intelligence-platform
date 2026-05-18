@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * Segment definition. The rule is stored as JSON so adding new segment
- * types only requires a new rule handler in the service — no schema change.
- *
- * Example rule: { "type": "HIGH_VALUE_USER", "params": { "min_spend": 50000 } }
- */
 module.exports = (sequelize, DataTypes) => {
   const Segment = sequelize.define(
     'Segment',

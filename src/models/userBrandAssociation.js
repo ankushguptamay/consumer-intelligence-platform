@@ -1,9 +1,5 @@
 'use strict';
 
-/**
- * Junction between users and brands.
- * Tracks per-brand registration date + rolled-up spend/activity.
- */
 module.exports = (sequelize, DataTypes) => {
   const UserBrandAssociation = sequelize.define(
     'UserBrandAssociation',

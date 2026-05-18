@@ -1,9 +1,5 @@
 'use strict';
 
-/**
- * Behavioural / transaction event log.
- * Every event is tied to both a user and a brand.
- */
 module.exports = (sequelize, DataTypes) => {
   const Event = sequelize.define(
     'Event',

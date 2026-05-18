@@ -1,15 +1,5 @@
 'use strict';
 
-/**
- * Password-based admin auth.
- *
- * - Access token: short-lived JWT (15m default)
- * - Refresh token: 64-byte random secret, SHA-256-hashed in DB.
- *   Logout sets revoked_at -> session invalidated immediately.
- * - Change password revokes ALL refresh tokens for the admin.
- * - Every attempt (good or bad) is written to login_records.
- */
-
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const config = require('../config');
